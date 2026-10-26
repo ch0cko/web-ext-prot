@@ -2,23 +2,24 @@
   "manifest_version": 3,
   "version": "1.0",
   "name": "Test",
+  "permissions": ["storage"],
 
   "action": {
     "default_popup": "popup-window.html",
     "default_icon": {
-     "19": "placeholder-toolbar-icon.jpg",
-     "38": "placeholder-toolbar-icon.jpg"
-   }
+      "19": "placeholder-toolbar-icon.jpg",
+      "38": "placeholder-toolbar-icon.jpg"
+    }
   },
 
   "content_scripts": [
     {
-     "matches": [
+      "matches": [
         "https://gemini.google.com/*",
         "https://claude.ai/*",
         "https://chatgpt.com/*"
-    ],
-     "js": ["main.js"]
+      ],
+      "js": ["content.js"]
     }
   ]
 }
